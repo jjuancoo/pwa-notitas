@@ -5,15 +5,17 @@
 
     <div class="notes">
         <ul>
-            <li v-for="(page, index) of pages" class="page">
-                <div> {{page.title}} titulo </div>
-                <div> {{page.content}} cont </div>
-            </li>
-            <li class="new-note">
-                <v-btn fab dark color="indigo" @click="newNote()">
-                    <v-icon dark>add</v-icon>
-                </v-btn>
-            </li>
+            <v-card v-for="(page, index) in pages" class="page">
+                <v-cart-title primary-title>
+                    <div> 
+                        <h3 class="headline mb-0">{{page.title}} tit + {{index}}</h3>
+                        <div> {{page.content}} cont </div>
+                    </div>
+                </v-cart-title>
+            </v-card>
+            <v-btn fab dark color="indigo" @click="newNote()">
+                <v-icon dark>add</v-icon>
+            </v-btn>
         </ul>
     </div>
 </template>
