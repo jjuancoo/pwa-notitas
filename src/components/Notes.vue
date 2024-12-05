@@ -4,19 +4,17 @@
     </div> -->
 
     <div class="notes">
-        
-            <v-card v-for="(page, index) in pages" class="page" :key="index">
-                <v-cart-title primary-title>
-                    <div> 
-                        <h3 class="headline mb-0">{{page.title}} tit + {{index}}</h3>
-                        <div> {{page.content}} cont </div>
-                    </div>
-                </v-cart-title>
-            </v-card>
-            <v-btn fab dark color="indigo" @click="newNote()">
-                <v-icon dark>add</v-icon>
-            </v-btn>
-        
+        <v-card v-for="(page, index) in pages" class="page" :key="index">
+            <v-cart-title primary-title>
+                <div>
+                    <h3 class="headline mb-0">{{ page.title }} tit + {{ index }}</h3>
+                    <div> {{ page.content }} cont </div>
+                </div>
+            </v-cart-title>
+        </v-card>
+        <v-btn fab dark color="indigo" @click="newNote()">
+            <v-icon dark>add</v-icon>
+        </v-btn>
     </div>
 </template>
 
