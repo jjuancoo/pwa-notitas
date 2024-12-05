@@ -64,7 +64,7 @@
 <script>
 // import HelloWorld from './components/HelloWorld';
 import Notes from './components/Notes'
-import About from './components/About'
+// import About from './components/About'
 
 export default {
   components: {
@@ -81,7 +81,7 @@ export default {
       this.pages.push({
         id: Date.now(),
         title: 'Nueva Nota',
-        content: ''
+        content: 'lorem ipsum dolor sit amet, consectetur adip eget eu in lorem ipsum dolor'
       })
       console.log(this.pages)
     },

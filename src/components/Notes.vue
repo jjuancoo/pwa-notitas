@@ -1,11 +1,11 @@
 <template>
-    <div class="hello">
+    <!-- <div class="hello">
         <h1>{{msg}}</h1>
-    </div>
+    </div> -->
 
     <div class="notes">
-        <ul>
-            <v-card v-for="(page, index) in pages" class="page">
+        
+            <v-card v-for="(page, index) in pages" class="page" :key="index">
                 <v-cart-title primary-title>
                     <div> 
                         <h3 class="headline mb-0">{{page.title}} tit + {{index}}</h3>
@@ -16,13 +16,13 @@
             <v-btn fab dark color="indigo" @click="newNote()">
                 <v-icon dark>add</v-icon>
             </v-btn>
-        </ul>
+        
     </div>
 </template>
 
 <script>
     export default{
-        name: 'Notes',
+        name: 'NotesNotitas',
         props: ['pages'],
         methods: {
             newNote(){
