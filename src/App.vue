@@ -6,11 +6,17 @@
         <span>VueNoteApp</span>
       </v-toolbar-title>
       <v-spacer></v-spacer>
+      <v-toolbar-item>
+        <v-btn flat>About</v-btn>
+      </v-toolbar-item>
     </v-toolbar>
     <v-content>
+      <Notes :pages="pages" @new-note="newNote"/>
+    </v-content>
+    <!-- <v-content>
       <img src="./assets/logo.png" alt="Vue Logo">
       <HelloWorld msg="Bienvenido a tu App Vue.js"/>
-    </v-content>
+    </v-content> -->
 
     <!-- <v-app-bar
       app
@@ -57,18 +63,35 @@
 
 <script>
 // import HelloWorld from './components/HelloWorld';
-import Note from './components/Notes'
+import Notes from './components/Notes'
 import About from './components/About'
 
 export default {
-  name: 'App',
   components: {
-    Note,
+    Notes,
   },
 
+  //Este data es propio de vue
   data: () => ({
-    //
+    pages: [],
+    index: 0
   }),
+  methods: {
+    newNote() {
+      this.pages.push({
+        id: Date.now(),
+        title: 'Nueva Nota',
+        content: ''
+      })
+      console.log(this.pages)
+    },
+    saveNote (){
+
+    },
+    deleteNote(){
+
+    }
+  }
 };
 </script>
 
